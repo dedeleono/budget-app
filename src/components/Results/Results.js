@@ -11,7 +11,7 @@ const Results = (props) => {
             <div className={styles.container}>
                 <h2 className={styles.titles}>{props.bdget}</h2>
                 <h2 className={styles.titles}>{props.expenses}</h2>
-                <h2 className={styles.titles}>0</h2>
+                <h2 className={styles.titles}>{(props.bdget - props.expenses)}</h2>
             </div>
         </>
     )

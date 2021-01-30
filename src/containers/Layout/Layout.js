@@ -30,9 +30,16 @@ const Layout = () => {
         setState(newState);
     };
 
-    const expenseAdd = (event) => {
+    /*const expenseAdd = (event) => {
         const newState = {...state}
         const newExpense = event.target.value;
+        newState.expense = newExpense;
+        setState(newState);
+    };*/
+
+    const expenseAdd = () => {
+        const newState = {...state}
+        const newExpense = inputRef.current.value;
         newState.expense = newExpense;
         setState(newState);
     };
@@ -47,11 +54,12 @@ const Layout = () => {
             <div>
                 <Budget 
                     budget={budgetAdd}
-                    input={setInputValue}
+                    /*input={setInputValue}*/
                     inputRef={inputRef}
                 />
                 <Expenses 
                     expense={expenseAdd}
+                    inputRef={inputRef}
                 />
             </div>
             <div className={styles.results}>
