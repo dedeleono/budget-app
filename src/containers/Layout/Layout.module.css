@@ -1,0 +1,10 @@
+.title{
+    margin: auto;
+    padding: 0;
+    text-align: center;
+}
+
+.results{
+    display:inline-flex;
+    float: right;
+}

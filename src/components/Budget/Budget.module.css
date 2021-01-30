@@ -1,0 +1,10 @@
+.container{
+    border: 4px solid green;
+    width: 35%;
+    height: auto;
+    border-radius: 1rem;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
