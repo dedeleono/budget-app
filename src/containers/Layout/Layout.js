@@ -12,9 +12,10 @@ const Layout = () => {
         balance: 0,
     });
 
-    const [inputState, setInputState] = useState(0);
+    /*const [inputState, setInputState] = useState(0);*/
 
-    const inputRef = useRef(null);
+    const inputRef1 = useRef(null);
+    const inputRef2 = useRef(null);
 
     /*const budgetAdd = () => {
         const newState = {...state}
@@ -25,7 +26,7 @@ const Layout = () => {
 
     const budgetAdd = () => {
         const newState = {...state}
-        const newBudget = inputRef.current.value;
+        const newBudget = inputRef1.current.value;
         newState.budget = newBudget;
         setState(newState);
     };
@@ -39,14 +40,15 @@ const Layout = () => {
 
     const expenseAdd = () => {
         const newState = {...state}
-        const newExpense = inputRef.current.value;
-        newState.expense = newExpense;
+        const oldExpense = state.expense;
+        const newExpense = inputRef2.current.value;
+        newState.expense = Number(newExpense) + Number(oldExpense);
         setState(newState);
     };
 
-    const setInputValue = (event) => {
+    /*const setInputValue = (event) => {
         setInputState(event.target.value);
-    };
+    };*/
 
     return(
         <>
@@ -55,11 +57,11 @@ const Layout = () => {
                 <Budget 
                     budget={budgetAdd}
                     /*input={setInputValue}*/
-                    inputRef={inputRef}
+                    inputRef={inputRef1}
                 />
                 <Expenses 
                     expense={expenseAdd}
-                    inputRef={inputRef}
+                    inputRef={inputRef2}
                 />
             </div>
             <div className={styles.results}>

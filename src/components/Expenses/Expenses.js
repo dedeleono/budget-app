@@ -11,7 +11,7 @@ const Expenses = (props) => {
             </div>
             <div>
                 {/*<input type="text" placeholder="how much you wasted man" onChange={props.expense}></input>*/}
-                <input type="text" placeholder="how much you wasted man" ref={props.inputRef}></input>
+                <input type="text" id="expense" placeholder="how much you wasted man" ref={props.inputRef}></input>
             </div>
             <button onClick={props.expense}>Add Expense</button>
         </div>
