@@ -1,11 +1,22 @@
 .container{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-right: 15px;
+    margin-right: 10px;
     padding: 1rem;
+    width: 100%;
 }
 
 .titles{
     padding: 1rem;
+}
+
+.containerN{
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.titlesN{
+    padding-left: 6rem;
+    text-align: center;
+    align-items: stretch;
 }

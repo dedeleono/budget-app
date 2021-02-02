@@ -52,8 +52,9 @@ const Layout = () => {
 
     return(
         <>
-            <div className={styles.title}>Budget App</div>
-            <div>
+        <div className={styles.title}>Budget App</div>
+        <div className={styles.mainContainer}>
+            <div className={styles.inputs}>
                 <Budget 
                     budget={budgetAdd}
                     /*input={setInputValue}*/
@@ -70,6 +71,7 @@ const Layout = () => {
                     expenses={state.expense}
                 />
             </div>
+        </div>
         </>
         )
 }

@@ -1,10 +1,20 @@
 .title{
     margin: auto;
-    padding: 0;
+    padding-top: 1rem;
     text-align: center;
 }
 
+.inputs{
+    width: 100%;
+}
+
+.mainContainer{
+    width: 100%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
 .results{
-    display:inline-flex;
-    float: right;
+    width: 100%;
 }
