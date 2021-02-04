@@ -7,7 +7,7 @@ const Expenses = (props) => {
         <div className={styles.container}>
             <div>
                 <h1>How much you wasting bruh?</h1>
-                <input type="text" placeholder="what did you do?" onChange></input>
+                <input type="text" placeholder="what did you do?" ref={props.inputText}></input>
             </div>
             <div>
                 {/*<input type="text" placeholder="how much you wasted man" onChange={props.expense}></input>*/}

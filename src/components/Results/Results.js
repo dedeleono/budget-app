@@ -1,6 +1,8 @@
 import styles from './Results.module.css';
+import ExpensesList from '../../containers/ExpensesList/ExpensesList';
 
 const Results = (props) => {
+
     return(
         <>
         <div>
@@ -15,9 +17,10 @@ const Results = (props) => {
                 <h2 className={styles.titlesN}>{(props.bdget - props.expenses)}</h2>
             </div>
         </div>
-        <div>Expenses List</div>
-        <span>Expense title</span><span>Expense amount</span>
-        
+        <ExpensesList
+            value={props.value}
+            text={props.text}
+        />
         </>
     )
 }
