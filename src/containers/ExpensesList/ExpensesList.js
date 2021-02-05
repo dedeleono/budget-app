@@ -12,8 +12,8 @@ const ExpensesList = (props) => {
                 <th>Quantity Wasted</th>
             </tr>
             <tr>
-                <td>{props.text}</td>
-                <td>{props.value}</td>
+                <td>{props.t}</td>
+                <td>{props.v}</td>
             </tr>
         </table>
         </div>

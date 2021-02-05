@@ -18,8 +18,8 @@ const Results = (props) => {
             </div>
         </div>
         <ExpensesList
-            value={props.value}
-            text={props.text}
+            v={props.value}
+            t={props.text}
         />
         </>
     )
