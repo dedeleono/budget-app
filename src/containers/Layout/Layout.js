@@ -3,6 +3,7 @@ import styles from './Layout.module.css';
 import Budget from '../../components/Budget/Budget';
 import Expenses from '../../components/Expenses/Expenses';
 import Results from '../../components/Results/Results';
+import ExpensesList from '../../containers/ExpensesList/ExpensesList';
 
 const Layout = () => {
 
@@ -14,8 +15,8 @@ const Layout = () => {
     });
 
     const [expItemState, setExpItemState] = useState({
-        text: "",
-        value: 0,
+        text: [""],
+        value: [0],
     });
 
     /*const [inputState, setInputState] = useState(0);*/
@@ -90,9 +91,13 @@ const Layout = () => {
                 <Results 
                     bdget={state.budget}
                     expenses={state.expense}
-                    value={expItemState.value}
-                    text={expItemState.text}
                 />
+                <div>
+                <ExpensesList
+                    value = {expItemState.value}
+                    text = {expItemState.text}
+                />
+                </div>
             </div>
         </div>
         </>
