@@ -55,13 +55,13 @@ const Layout = () => {
 
     const textAdd = () => {
         setTextState(prevText => {
-            return [...prevText, state.text]
+            return [...prevText, textState]
         })
     }
 
     const valueAdd = () => {
         setValueState(prevValue => {
-            return [...prevValue, state.expense]
+            return [...prevValue, valueState]
         })
     }
 
@@ -96,10 +96,12 @@ const Layout = () => {
                     expenses={state.expense}
                 />
                 <div>
-                <ExpensesList
-                    value = {expItemState.value}
-                    text = {expItemState.text}
-                />
+                    {textState.map((text, index) => (
+                        <ExpensesList
+                            value = {valueState}
+                            text = {text}
+                        />                        
+                    ))}
                 </div>
             </div>
         </div>
