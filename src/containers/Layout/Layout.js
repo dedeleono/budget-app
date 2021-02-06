@@ -14,10 +14,8 @@ const Layout = () => {
         balance: 0,
     });
 
-    const [expItemState, setExpItemState] = useState({
-        text: [""],
-        value: [0],
-    });
+    const [textState, setTextState] = useState([]);
+    const [valueState, setValueState] = useState([]);
 
     /*const [inputState, setInputState] = useState(0);*/
 
@@ -56,16 +54,21 @@ const Layout = () => {
     };
 
     const textAdd = () => {
-        const newItem = {...expItemState};
-        const expenseText = inputRef3.current.value;
-        newItem.text = expenseText;
-        newItem.value = state.oldValue;
-        setExpItemState(newItem);
+        setTextState(prevText => {
+            return [...prevText, state.text]
+        })
+    }
+
+    const valueAdd = () => {
+        setValueState(prevValue => {
+            return [...prevValue, state.expense]
+        })
     }
 
     const addUp = () => {
         expenseAdd();
         textAdd();
+        valueAdd();
     }
     /*const setInputValue = (event) => {
         setInputState(event.target.value);
